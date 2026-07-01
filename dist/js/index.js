@@ -1,82 +1,81 @@
+
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabPanels = document.querySelectorAll('.tab-panel');
+
+if (tabBtns.length > 0 && tabPanels.length > 0) {
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            tabBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            const tabId = this.dataset.tab;
+            tabPanels.forEach(panel => panel.classList.remove('active'));
+
+            const targetPanel = document.getElementById('tab-' + tabId);
+            if (targetPanel) {
+                targetPanel.classList.add('active');
+            }
+        });
+    });
+}
+
+
+const burgerBtn = document.getElementById('burgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileClose = document.getElementById('mobileClose');
+const body = document.body;
+
+if (burgerBtn && mobileMenu) {
+    let overlay = document.querySelector('.menu-overlay');
+
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.className = 'menu-overlay';
+        body.appendChild(overlay);
+    }
+
+    function openMenu() {
+        mobileMenu.classList.add('open');
+        burgerBtn.classList.add('active');
+        overlay.classList.add('active');
+        body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        mobileMenu.classList.remove('open');
+        burgerBtn.classList.remove('active');
+        overlay.classList.remove('active');
+        body.style.overflow = '';
+    }
+
+    burgerBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        if (mobileMenu.classList.contains('open')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    if (mobileClose) {
+        mobileClose.addEventListener('click', closeMenu);
+    }
+
+    overlay.addEventListener('click', closeMenu);
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeMenu();
+        }
+    });
+
+    document.querySelectorAll('.mobile-nav a').forEach(function(link) {
+        link.addEventListener('click', closeMenu);
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
 
-    // ===== ТАБЫ =====
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const tabPanels = document.querySelectorAll('.tab-panel');
-
-    if (tabBtns.length > 0 && tabPanels.length > 0) {
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                tabBtns.forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-
-                const tabId = this.dataset.tab;
-                tabPanels.forEach(panel => panel.classList.remove('active'));
-
-                const targetPanel = document.getElementById('tab-' + tabId);
-                if (targetPanel) {
-                    targetPanel.classList.add('active');
-                }
-            });
-        });
-    }
-
-    // ===== БУРГЕР =====
-    const burgerBtn = document.getElementById('burgerBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const mobileClose = document.getElementById('mobileClose');
-    const body = document.body;
-
-    if (burgerBtn && mobileMenu) {
-        let overlay = document.querySelector('.menu-overlay');
-
-        if (!overlay) {
-            overlay = document.createElement('div');
-            overlay.className = 'menu-overlay';
-            body.appendChild(overlay);
-        }
-
-        function openMenu() {
-            mobileMenu.classList.add('open');
-            burgerBtn.classList.add('active');
-            overlay.classList.add('active');
-            body.style.overflow = 'hidden';
-        }
-
-        function closeMenu() {
-            mobileMenu.classList.remove('open');
-            burgerBtn.classList.remove('active');
-            overlay.classList.remove('active');
-            body.style.overflow = '';
-        }
-
-        burgerBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            if (mobileMenu.classList.contains('open')) {
-                closeMenu();
-            } else {
-                openMenu();
-            }
-        });
-
-        if (mobileClose) {
-            mobileClose.addEventListener('click', closeMenu);
-        }
-
-        overlay.addEventListener('click', closeMenu);
-
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeMenu();
-            }
-        });
-
-        document.querySelectorAll('.mobile-nav a').forEach(function(link) {
-            link.addEventListener('click', closeMenu);
-        });
-    }
-
-    // ===== ФОРМА =====
     const form = document.querySelector('.feedback-form');
 
     if (form) {
@@ -91,6 +90,8 @@ document.addEventListener('DOMContentLoaded', function() {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
 
+            console.log('1. Форма отправлена');
+
             const nameInput = document.getElementById('form-name');
             const phoneInput = document.getElementById('form-phone');
             const siteInput = document.getElementById('form-site');
@@ -100,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const nameValue = nameInput.value.trim();
             const nameRegex = /^[а-яА-ЯёЁa-zA-Z\s-]+$/;
+
             if (!nameRegex.test(nameValue) || nameValue === '') {
                 nameInput.style.borderColor = '#D61A21';
                 isValid = false;
@@ -109,6 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const phoneValue = phoneInput.value.trim();
             const phoneRegex = /^[0-9+\s\-()]+$/;
+
             if (!phoneRegex.test(phoneValue) || phoneValue.length < 5) {
                 phoneInput.style.borderColor = '#D61A21';
                 isValid = false;
@@ -134,6 +137,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 agreeCheckbox.style.outline = 'none';
             }
 
+            console.log('2. isValid =', isValid);
+
             if (isValid) {
                 const formData = {
                     id: Date.now(),
@@ -147,15 +152,23 @@ document.addEventListener('DOMContentLoaded', function() {
                     service: document.getElementById('form-service').value
                 };
 
+                console.log('3. Данные для сохранения:', formData);
+
                 let applications = JSON.parse(localStorage.getItem('applications')) || [];
+                console.log('4. Старые заявки:', applications);
+
                 applications.push(formData);
                 localStorage.setItem('applications', JSON.stringify(applications));
+
+                console.log('5. Заявка сохранена! Всего:', applications.length);
 
                 form.reset();
 
                 document.querySelectorAll('.form-input').forEach(function(inp) {
                     inp.style.borderColor = '#d0d0d0';
                 });
+            } else {
+                console.log('Форма не валидна');
             }
         });
 
@@ -173,16 +186,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-
-
-
-
+    // ===== МОДАЛКА ДЛЯ МЕНЕДЖЕРА =====
     const modal = document.getElementById('managerModal');
     const closeBtn = document.getElementById('managerModalClose');
     const modalPhoto = document.getElementById('modalPhoto');
     const modalName = document.getElementById('modalName');
     const modalPhone = document.getElementById('modalPhone');
-    const modalCallBtn = document.getElementById('modalCallBtn');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
 
     if (modal) {
         document.querySelectorAll('.managers__card').forEach(function(card) {
@@ -195,9 +205,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 modalPhoto.alt = name;
                 modalName.textContent = name;
                 modalPhone.textContent = phone;
-
-                const cleanPhone = phone.replace(/[^0-9+]/g, '');
-                modalCallBtn.href = 'tel:' + cleanPhone;
 
                 modal.classList.add('active');
                 document.body.style.overflow = 'hidden';
@@ -213,6 +220,10 @@ document.addEventListener('DOMContentLoaded', function() {
             closeBtn.addEventListener('click', closeModal);
         }
 
+        if (modalCloseBtn) {
+            modalCloseBtn.addEventListener('click', closeModal);
+        }
+
         modal.addEventListener('click', function(e) {
             if (e.target === modal) {
                 closeModal();
@@ -225,5 +236,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
 });
