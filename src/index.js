@@ -1,3 +1,6 @@
+// ================================================================
+// 1. ТАБЫ
+// ================================================================
 
 const tabBtns = document.querySelectorAll('.tab-btn');
 const tabPanels = document.querySelectorAll('.tab-panel');
@@ -19,6 +22,9 @@ if (tabBtns.length > 0 && tabPanels.length > 0) {
     });
 }
 
+// ================================================================
+// 2. БУРГЕР МЕНЮ
+// ================================================================
 
 const burgerBtn = document.getElementById('burgerBtn');
 const mobileMenu = document.getElementById('mobileMenu');
@@ -73,6 +79,10 @@ if (burgerBtn && mobileMenu) {
         link.addEventListener('click', closeMenu);
     });
 }
+
+// ================================================================
+// 3. ФОРМА
+// ================================================================
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -186,64 +196,65 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // ===== МОДАЛЬНОЕ ОКНО ДЛЯ МЕНЕДЖЕРА =====
-    document.addEventListener('DOMContentLoaded', function() {
+});
 
-        const modal = document.getElementById('managerModal');
-        const closeBtn = document.getElementById('managerModalClose');
-        const modalPhoto = document.getElementById('modalPhoto');
-        const modalName = document.getElementById('modalName');
-        const modalStatus = document.getElementById('modalStatus');
-        const modalPhone = document.getElementById('modalPhone');
-        const modalEmail = document.getElementById('modalEmail');
-        const modalCallBtn = document.getElementById('modalCallBtn');
+// ================================================================
+// 4. МОДАЛЬНОЕ ОКНО ДЛЯ МЕНЕДЖЕРА
+// ================================================================
 
-        if (!modal) return;
+document.addEventListener('DOMContentLoaded', function() {
 
-        document.querySelectorAll('.managers__card').forEach(function(card) {
-            card.addEventListener('click', function() {
-                const photo = this.querySelector('.manager_photo img')?.src || '';
-                const name = this.querySelector('.manager_name')?.textContent || 'Менеджер';
-                const status = this.querySelector('.manager_status')?.textContent || '';
-                const phone = this.querySelector('.number_manager')?.textContent || '';
-                const email = this.querySelector('.manager_email')?.textContent || '';
+    const modal = document.getElementById('managerModal');
+    const closeBtn = document.getElementById('managerModalClose');
+    const modalPhoto = document.getElementById('modalPhoto');
+    const modalName = document.getElementById('modalName');
+    const modalPhone = document.getElementById('modalPhone');
+    const modalCloseBtn = document.getElementById('modalCloseBtn');
 
-                modalPhoto.src = photo;
-                modalPhoto.alt = name;
-                modalName.textContent = name;
-                modalStatus.textContent = status;
-                modalPhone.textContent = phone;
-                modalEmail.textContent = email;
+    if (!modal) {
+        console.log('Модалка не найдена!');
+        return;
+    }
 
-                const cleanPhone = phone.replace(/[^0-9+]/g, '');
-                modalCallBtn.href = 'tel:' + cleanPhone;
+    document.querySelectorAll('.managers__card').forEach(function(card) {
+        card.addEventListener('click', function() {
+            const photo = this.querySelector('.manager_photo img')?.src || '';
+            const name = this.querySelector('.manager_name')?.textContent || 'Менеджер';
+            const phone = this.querySelector('.number_manager')?.textContent || '';
 
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
+            modalPhoto.src = photo;
+            modalPhoto.alt = name;
+            modalName.textContent = name;
+            modalPhone.textContent = phone;
+
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
         });
+    });
 
-        function closeModal() {
-            modal.classList.remove('active');
-            document.body.style.overflow = '';
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
+
+    if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', closeModal);
+    }
+
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closeModal();
         }
+    });
 
-        if (closeBtn) {
-            closeBtn.addEventListener('click', closeModal);
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeModal();
         }
-
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                closeModal();
-            }
-        });
-
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeModal();
-            }
-        });
-
     });
 
 });

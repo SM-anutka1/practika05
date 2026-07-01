@@ -291,7 +291,7 @@
   }
 
   .one_text {
-    font-size: 20px;
+    font-size: 10px;
     margin-top: 15px;
   }
 
@@ -448,14 +448,17 @@
   }
 
   .keysik {
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    max-width: 100%;
   }
 
   .keys_full {
-    width: 100%;
-    max-width: 340px;
-    min-height: 300px;
+    width: 280px;
+    min-height: 320px;
+  }
+
+  .keys_photo {
+    height: 180px;
   }
 }
 
@@ -545,17 +548,34 @@
   }
 
   .keys_full {
-    padding: 10px;
+    width: 240px;
     min-height: 280px;
+    padding: 10px;
   }
 
   .keys_photo {
-    height: 160px;
+    height: 140px;
   }
 
   .keys_desr {
     font-size: 10px;
     margin-left: 0;
     margin-top: 10px;
+  }
+
+  .ssilka {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 360px) {
+  .keys_full {
+    width: 200px;
+    min-height: 250px;
+  }
+
+  .keys_photo {
+    height: 120px;
   }
 }

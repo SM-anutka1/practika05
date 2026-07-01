@@ -1,3 +1,6 @@
+// ================================================================
+// 1. ТАБЫ
+// ================================================================
 
 const tabBtns = document.querySelectorAll('.tab-btn');
 const tabPanels = document.querySelectorAll('.tab-panel');
@@ -19,6 +22,9 @@ if (tabBtns.length > 0 && tabPanels.length > 0) {
     });
 }
 
+// ================================================================
+// 2. БУРГЕР МЕНЮ
+// ================================================================
 
 const burgerBtn = document.getElementById('burgerBtn');
 const mobileMenu = document.getElementById('mobileMenu');
@@ -73,6 +79,10 @@ if (burgerBtn && mobileMenu) {
         link.addEventListener('click', closeMenu);
     });
 }
+
+// ================================================================
+// 3. ФОРМА
+// ================================================================
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -186,7 +196,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // ===== МОДАЛКА ДЛЯ МЕНЕДЖЕРА =====
+});
+
+// ================================================================
+// 4. МОДАЛЬНОЕ ОКНО ДЛЯ МЕНЕДЖЕРА
+// ================================================================
+
+document.addEventListener('DOMContentLoaded', function() {
+
     const modal = document.getElementById('managerModal');
     const closeBtn = document.getElementById('managerModalClose');
     const modalPhoto = document.getElementById('modalPhoto');
@@ -194,46 +211,50 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalPhone = document.getElementById('modalPhone');
     const modalCloseBtn = document.getElementById('modalCloseBtn');
 
-    if (modal) {
-        document.querySelectorAll('.managers__card').forEach(function(card) {
-            card.addEventListener('click', function() {
-                const photo = this.querySelector('.manager_photo img')?.src || '';
-                const name = this.querySelector('.manager_name')?.textContent || 'Менеджер';
-                const phone = this.querySelector('.number_manager')?.textContent || '';
-
-                modalPhoto.src = photo;
-                modalPhoto.alt = name;
-                modalName.textContent = name;
-                modalPhone.textContent = phone;
-
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
-        });
-
-        function closeModal() {
-            modal.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        if (closeBtn) {
-            closeBtn.addEventListener('click', closeModal);
-        }
-
-        if (modalCloseBtn) {
-            modalCloseBtn.addEventListener('click', closeModal);
-        }
-
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                closeModal();
-            }
-        });
-
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeModal();
-            }
-        });
+    if (!modal) {
+        console.log('Модалка не найдена!');
+        return;
     }
+
+    document.querySelectorAll('.managers__card').forEach(function(card) {
+        card.addEventListener('click', function() {
+            const photo = this.querySelector('.manager_photo img')?.src || '';
+            const name = this.querySelector('.manager_name')?.textContent || 'Менеджер';
+            const phone = this.querySelector('.number_manager')?.textContent || '';
+
+            modalPhoto.src = photo;
+            modalPhoto.alt = name;
+            modalName.textContent = name;
+            modalPhone.textContent = phone;
+
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
+
+    if (modalCloseBtn) {
+        modalCloseBtn.addEventListener('click', closeModal);
+    }
+
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    });
+
 });

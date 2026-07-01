@@ -50,12 +50,6 @@
 @use 'components/primer';
 @use 'components/window1';
 
-
-
-
-
-
-
 .your-block {
   background-image: url('../images/fon.png');
   background-size: cover;
@@ -63,9 +57,7 @@
   background-position: center;
 }
 
-
 @media (max-width: 1024px) {
-
   .AAAA {
     display: flex;
   }
@@ -250,14 +242,26 @@
     flex: 0 0 220px !important;
   }
 
+  .keysik {
+    max-width: 100%;
+    gap: 20px;
+  }
+
   .keys_full {
-    width: 100% !important;
+    width: 340px !important;
+    min-height: 350px !important;
     height: auto !important;
   }
 
   .keys-wrapper {
-    flex-direction: column !important;
-    align-items: center !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+  }
+
+  .keys_photo {
+    height: 200px !important;
   }
 
   .block9_reb_block {
@@ -340,25 +344,31 @@
     font-size: 18px !important;
     margin-left: 20px !important;
   }
+
   .p2 {
     margin-left: 150px;
   }
+
   .p6 {
     margin-left: 560px;
     margin-top: -100px;
   }
+
   .p3 {
     margin-left: 280px;
     margin-top: -190px;
   }
+
   .p5 {
     margin-left: 530px;
     margin-top: -150px;
   }
+
   .p4 {
     margin-left: 480px;
     margin-top: -300px;
   }
+
   .block9_text5_1,
   .block9_text5_2 {
     font-size: 16px;
@@ -483,6 +493,30 @@
 
   .managers__name {
     font-size: 16px !important;
+  }
+
+  .keysik {
+    gap: 15px;
+  }
+
+  .keys_full {
+    width: 280px !important;
+    min-height: 320px !important;
+    height: auto !important;
+  }
+
+  .keys-wrapper {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+
+  .keys_photo {
+    height: 180px !important;
+  }
+
+  .keys_desr {
+    font-size: 11px !important;
   }
 
   .text_block9 {
@@ -678,6 +712,35 @@
     font-size: 14px !important;
   }
 
+  .keys_full {
+    width: 240px !important;
+    min-height: 280px !important;
+    height: auto !important;
+    padding: 10px !important;
+  }
+
+  .keys_photo {
+    height: 140px !important;
+  }
+
+  .keys_desr {
+    font-size: 10px !important;
+    margin-left: 0 !important;
+  }
+
+  .ssilka {
+    flex-direction: column !important;
+    gap: 5px !important;
+  }
+
+  .keys_keys {
+    font-size: 14px !important;
+  }
+
+  .keys_ssilka {
+    font-size: 14px !important;
+  }
+
   .text_block9 {
     font-size: 20px !important;
   }
@@ -738,5 +801,24 @@
   .vk svg {
     width: 24px !important;
     height: 24px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .keys_full {
+    width: 200px !important;
+    min-height: 250px !important;
+  }
+
+  .keys_photo {
+    height: 120px !important;
+  }
+
+  .keys_keys {
+    font-size: 12px !important;
+  }
+
+  .keys_ssilka {
+    font-size: 12px !important;
   }
 }

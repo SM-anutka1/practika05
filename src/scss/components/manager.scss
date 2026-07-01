@@ -68,25 +68,25 @@
 
 @media (max-width: 1024px) {
   .managers__card {
-    width: 420px;
+    width: 430px;
     height: 240px;
     padding: 15px 18px;
     gap: 15px;
   }
 
   .manager_photo {
-    width: 110px;
-    height: 140px;
+    width: 80px;
+    height: 100px;
   }
 
   .manager_name {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .manager_status,
   .number_manager,
   .manager_email {
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .manager_text {
@@ -95,11 +95,6 @@
 }
 
 @media (max-width: 768px) {
-  .managers {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .managers__card {
     width: 100%;
     max-width: 420px;
