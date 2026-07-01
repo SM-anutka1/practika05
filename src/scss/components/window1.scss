@@ -1,8 +1,4 @@
-* {
-  font-family: 'Merriweather', serif;
-}
-/* ===== Модальное окно для подарков ===== */
-.modal-overlay {
+.manager-modal-overlay {
   display: none;
   position: fixed;
   top: 0;
@@ -15,11 +11,11 @@
   align-items: center;
 }
 
-.modal-overlay.active {
+.manager-modal-overlay.active {
   display: flex;
 }
 
-.modal-content {
+.manager-modal-content {
   background: #fff;
   border-radius: 16px;
   max-width: 500px;
@@ -29,7 +25,7 @@
   animation: modalFadeIn 0.3s ease;
 }
 
-.modal-close {
+.manager-modal-close {
   position: absolute;
   top: 15px;
   right: 20px;
@@ -41,81 +37,81 @@
   transition: 0.3s;
 }
 
-.modal-close:hover {
+.manager-modal-close:hover {
   color: #D61A21;
   transform: rotate(90deg);
 }
 
-.modal-body h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  color: #D61A21;
-  text-align: center;
+.manager-modal-body {
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
 
-.modal-body p {
-  font-size: 16px;
-  color: #555;
-  text-align: center;
-  margin-bottom: 25px;
+.manager-modal-photo {
+  flex-shrink: 0;
+  width: 130px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 10px;
+
 }
 
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-group label {
+.manager-modal-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
+}
+
+.manager-modal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.manager-modal-name {
+  font-size: 28px;
+  font-weight: 700;
   color: #333;
 }
 
-.form-group input {
-  width: 100%;
-  padding: 12px 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+.manager-modal-status {
   font-size: 16px;
-  box-sizing: border-box;
-  transition: 0.3s;
-}
-
-.form-group input:focus {
-  border-color: #D61A21;
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(214, 26, 33, 0.2);
-}
-
-.gift-submit-btn {
-  width: 100%;
-  padding: 14px;
-  background: #D61A21;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.gift-submit-btn:hover {
-  background: #b00000;
-}
-
-.gift-link {
   color: #D61A21;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-  white-space: nowrap;
-  cursor: pointer;
 }
 
-.gift-link:hover {
-  text-decoration: underline;
-  color: #a00000;
+.manager-modal-phone {
+  font-size: 18px;
+  color: #555;
+  margin-top: 5px;
+}
+
+.manager-modal-email {
+  font-size: 14px;
+  color: #777;
+}
+
+.manager-modal-btn {
+  display: inline-block;
+  background: #D61A21;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.manager-modal-btn:hover {
+  background: #a00000;
+  transform: scale(1.02);
 }
 
 @keyframes modalFadeIn {
@@ -126,5 +122,35 @@
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .manager-modal-body {
+    flex-direction: column;
+    text-align: center;
+  }
+  .manager-modal-photo {
+    width: 100px;
+    height: 100px;
+  }
+  .manager-modal-name {
+    font-size: 24px;
+  }
+  .manager-modal-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .manager-modal-content {
+    padding: 25px;
+  }
+  .manager-modal-photo {
+    width: 80px;
+    height: 80px;
+  }
+  .manager-modal-name {
+    font-size: 20px;
   }
 }

@@ -44,12 +44,10 @@
             })
         </div>
     </div>
-    <div class="manager">
-        <div class="maneger_text">
-            Менеджеры
-        </div>
-        <div class="cart_manager">
 
+    <div class="manager">
+        <div class="maneger_text">Менеджеры</div>
+        <div class="cart_manager">
 
             <div class="managers">
                 @@include('../components/manager.html', {
@@ -67,6 +65,7 @@
                 "email_manager": "rita@webrazrabotka.ru"
                 })
             </div>
+
             <div class="managers">
                 @@include('../components/manager.html', {
                 "photo_manager": "assets/images/alenka.webp",
@@ -83,6 +82,7 @@
                 "email_manager": "sveta@webrazrabotka.ru"
                 })
             </div>
+
             <div class="managers">
                 @@include('../components/manager.html', {
                 "photo_manager": "assets/images/kris.webp",
@@ -92,13 +92,16 @@
                 "email_manager": "Kristina@webrazrabotka.ru"
                 })
             </div>
+
         </div>
     </div>
 </div>
+
 <div class="fot">
     @@include('../components/footer.html')
 </div>
 
+@@include('../components/window1.html')
 
 <script src="js/index.js"></script>
 </body>

@@ -34,14 +34,11 @@ a{
   margin-left: 100px;
   margin-top: 45px;
 }
-/* ===== СКРЫВАЕМ ВТОРУЮ ЦЕНУ И ПЕРИОД ===== */
 .seti_cost .cost_seti:nth-child(3),
 .seti_cost .period_seti:nth-child(4) {
   display: none;
 }
-.seti-wrapper{
-  //margin-top: 50px;
-}
+
 .block8_text5{
   font-size: 32px;
   margin-left: 100px;

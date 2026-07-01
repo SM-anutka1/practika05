@@ -1,4 +1,3 @@
-/* ===== КАРТОЧКИ СОЦ. СЕТЕЙ ===== */
 .seti_block {
   display: flex;
   justify-content: center;
@@ -78,13 +77,11 @@
   text-align: right;
 }
 
-/* ===== СКРЫВАЕМ ВТОРУЮ ЦЕНУ И ПЕРИОД ===== */
 .seti-wrapper .seti_cost .cost_seti:nth-child(3),
 .seti-wrapper .seti_cost .period_seti:nth-child(4) {
   display: none;
 }
 
-/* ===== ТРЕТЬЯ КАРТОЧКА — ПОКАЗЫВАЕМ ВСЁ ===== */
 .seti-wrapper:nth-child(3) .seti_cost .cost_seti:nth-child(3),
 .seti-wrapper:nth-child(3) .seti_cost .period_seti:nth-child(4) {
   display: block;

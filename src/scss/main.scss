@@ -12,7 +12,6 @@
 // ==== 4. Components ====
 @use 'components/header';
 @use 'components/str1';
-@use 'components/window1';
 @use 'components/predl_btn';
 @use 'components/form1';
 @use 'components/yandex_carta';
@@ -49,6 +48,7 @@
 @use 'components/keys';
 @use 'components/vizitka';
 @use 'components/primer';
+@use 'components/window1';
 
 
 
@@ -64,12 +64,6 @@
 }
 
 
-
-/* ================================================================
-   АДАПТИВНАЯ ВЕРСТКА (МИНИМАЛЬНАЯ)
-   ================================================================ */
-
-/* Планшеты и маленькие ноутбуки */
 @media (max-width: 1024px) {
 
   .AAAA {
@@ -84,7 +78,7 @@
 
   .text_bl2 {
     font-size: 20px !important;
-    margin-left:  20px !important;
+    margin-left: 20px !important;
     margin-top: 40px !important;
   }
 
@@ -346,9 +340,32 @@
     font-size: 18px !important;
     margin-left: 20px !important;
   }
+  .p2 {
+    margin-left: 150px;
+  }
+  .p6 {
+    margin-left: 560px;
+    margin-top: -100px;
+  }
+  .p3 {
+    margin-left: 280px;
+    margin-top: -190px;
+  }
+  .p5 {
+    margin-left: 530px;
+    margin-top: -150px;
+  }
+  .p4 {
+    margin-left: 480px;
+    margin-top: -300px;
+  }
+  .block9_text5_1,
+  .block9_text5_2 {
+    font-size: 16px;
+    margin-left: 0px;
+  }
 }
 
-/* Телефоны */
 @media (max-width: 768px) {
   .menu {
     margin-left: 10px !important;
@@ -508,7 +525,6 @@
   .block9_text5_1,
   .block9_text5_2 {
     font-size: 16px !important;
-    margin-left: 15px !important;
   }
 
   .one_text {
@@ -546,7 +562,6 @@
   }
 }
 
-/* Маленькие телефоны */
 @media (max-width: 480px) {
   .menu {
     margin-left: 5px !important;
