@@ -1,0 +1,91 @@
+/* ===== КАРТОЧКИ СОЦ. СЕТЕЙ ===== */
+.seti_block {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 75px;
+  padding: 0 20px;
+}
+
+.seti-wrapper {
+  flex: 0 0 auto;
+}
+
+.seti {
+  width: 680px;
+  height: 365px;
+  border: 3px solid #D61A21;
+  border-radius: 10px;
+  padding: 20px 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  position: relative;
+  margin-top: 50px;
+}
+
+.seti_text1 {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 700;
+  color: #D61A21;
+}
+
+.seti_text_mnogo {
+  //margin-left: 20px;
+  margin-top: 30px;
+}
+
+.seti_text2 {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.palka {
+  width: 245px;
+  height: 4px;
+  background-color: #D61A21;
+  border-radius: 10px;
+  transform: rotate(90deg);
+  position: absolute;
+  margin-left: 315px;
+  margin-top: 10px;
+  top: 50%;
+}
+
+.seti_cost {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cost_seti {
+  font-size: 24px;
+  color: #D61A21;
+  font-weight: 700;
+  text-align: right;
+}
+
+.period_seti {
+  font-size: 16px;
+  text-align: right;
+}
+
+/* ===== СКРЫВАЕМ ВТОРУЮ ЦЕНУ И ПЕРИОД ===== */
+.seti-wrapper .seti_cost .cost_seti:nth-child(3),
+.seti-wrapper .seti_cost .period_seti:nth-child(4) {
+  display: none;
+}
+
+/* ===== ТРЕТЬЯ КАРТОЧКА — ПОКАЗЫВАЕМ ВСЁ ===== */
+.seti-wrapper:nth-child(3) .seti_cost .cost_seti:nth-child(3),
+.seti-wrapper:nth-child(3) .seti_cost .period_seti:nth-child(4) {
+  display: block;
+}

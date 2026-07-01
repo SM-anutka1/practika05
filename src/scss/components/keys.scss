@@ -1,0 +1,58 @@
+.keys_full {
+  width: 386px;
+  height: 400px;
+  border-radius: 10px;
+  border: none;
+  background-color: #E8E8E8;
+  padding: 12px 15px;
+  box-sizing: border-box;
+}
+
+.keys_photo {
+  width: 100%;
+  height: 235px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.keys_photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.keys_keys {
+  font-size: 16px;
+  color: black;
+}
+
+.keys_ssilka {
+  font-size: 16px;
+  color: #D61A21 !important; /* ← красный */
+}
+
+.keys_ssilka a {
+  color: #D61A21 !important; /* ← красный для ссылки */
+  text-decoration: none;
+}
+
+.keys_ssilka a:hover {
+  text-decoration: underline;
+}
+
+.ssilka {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 15px; /* ← исправлено */
+  text-align: center;
+}
+
+.keys_desr {
+  font-size: 12px;
+  margin-left: 15px;
+  padding-top: 15px;
+}

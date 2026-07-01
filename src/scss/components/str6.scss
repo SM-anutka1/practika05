@@ -1,0 +1,60 @@
+* {
+  font-family: 'Merriweather', serif;
+}
+a{
+  text-decoration: none;
+
+}
+.text_block8 {
+  font-size: 48px;
+  padding-top: 135px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.block8 {
+  width: 100%;
+  background-image: url('../images/fon.webp');
+  height: 3350px;
+  margin: 0px;
+}
+.block8_text2{
+  font-size: 48px;
+  color: #D61A21;
+  margin-top: 30px;
+}
+.block8_text3{
+  font-size: 24px;
+  margin-left: 20px;
+  margin-top:45px;
+}
+.block8_text{
+  display: flex;
+  margin-left: 100px;
+  margin-top: 45px;
+}
+/* ===== СКРЫВАЕМ ВТОРУЮ ЦЕНУ И ПЕРИОД ===== */
+.seti_cost .cost_seti:nth-child(3),
+.seti_cost .period_seti:nth-child(4) {
+  display: none;
+}
+.seti-wrapper{
+  //margin-top: 50px;
+}
+.block8_text5{
+  font-size: 32px;
+  margin-left: 100px;
+  margin-top: 70px;
+}
+.block8_text6{
+  display: flex;
+  gap: 70px;
+  margin-top: 60px;
+  justify-content: center;
+}
+.bl2_text{
+  font-size: 36px;
+  margin-left: 100px;
+  margin-top: 60px;
+}

@@ -1,0 +1,77 @@
+/* ===== Глобальные стили ===== */
+* {
+  font-family: 'Merriweather', serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.contact_text {
+  font-size: 48px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.block4 {
+  width: 100%;
+  background-image: url('../images/fon.webp');
+  height: 2800px;
+  margin: 0px;
+}
+
+.contact_text2 {
+  font-size: 32px;
+  margin-left: 100px;
+  margin-top: 45px;
+}
+
+.contact_text3 {
+  font-size: 24px;
+  margin-left: 100px;
+  margin-top: 25px;
+}
+
+.cart_contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.cart1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.cart2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.maneger_text{
+  font-size: 48px;
+  margin-left: 100px;
+  margin-top: 80px;
+}
+.managers{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  gap: 100px;
+}
+.fot{
+  margin-top: -100px;
+}

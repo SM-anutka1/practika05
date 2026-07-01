@@ -1,0 +1,63 @@
+<div class="form-wrapper">
+  <form class="feedback-form">
+    <!-- 1. Имя + Название компании (в одном ряду) -->
+    <div class="form-row">
+      <div class="form-group">
+        <input type="text" id="form-name" placeholder="Имя" class="form-input">
+      </div>
+      <div class="form-group">
+        <input type="text" id="form-company" placeholder="Название компании" class="form-input">
+      </div>
+    </div>
+
+    <!-- 2. Телефон + Email (в одном ряду) -->
+    <div class="form-row">
+      <div class="form-group">
+        <input type="tel" id="form-phone" placeholder="+7 (___) ___-__-__" class="form-input">
+      </div>
+      <div class="form-group">
+        <input type="email" id="form-email" placeholder="E-mail" class="form-input">
+      </div>
+    </div>
+
+    <!-- 3. Адрес сайта (полная ширина) -->
+    <div class="form-row">
+      <div class="form-group form-group-full">
+        <input type="text" id="form-site" placeholder="Адрес действующего сайта" class="form-input form-input-full">
+      </div>
+    </div>
+
+    <!-- 4. Город + Выбор услуги (в одном ряду) -->
+    <div class="form-row">
+      <div class="form-group">
+        <input type="text" id="form-city" placeholder="Город" class="form-input">
+      </div>
+      <div class="form-group">
+        <select id="form-service" class="form-input">
+          <option value="">Выберите услугу</option>
+          <option value="Сайт по шаблону">Сайт по шаблону</option>
+          <option value="Эксклюзивный сайт">Эксклюзивный сайт</option>
+          <option value="Landing page">Landing page</option>
+          <option value="Сайт Витрина">Сайт Витрина</option>
+          <option value="Интернет-магазин">Интернет-магазин</option>
+          <option value="Реклама">Реклама</option>
+          <option value="Хостинг">Хостинг</option>
+          <option value="Копирайт">Копирайт</option>
+          <option value="Продвижение">Продвижение</option>
+          <option value="Дополнения">Дополнения</option>
+          <option value="Программирование">Программирование</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-checkbox">
+      <input type="checkbox" id="form-agree" required>
+      <label for="form-agree">
+        Согласие на обработку персональных данных с целью обработки запроса.
+        С условиями Политики и Согласия ознакомлен.
+      </label>
+    </div>
+
+    <button type="submit" class="form-submit">Отправить</button>
+  </form>
+</div>

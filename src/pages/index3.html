@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css"/>
+</head>
+<body>
+
+@@include('../components/header.html')
+
+<div class="block4">
+    <div class="contact">
+        <div class="contact_text">Контакты</div>
+        <div class="contact_text2">Адрес</div>
+        <div class="contact_text3">
+            603000, г. Нижний Новгород, ул. Родионова, д. 193 к.6
+        </div>
+        @@include('../components/yandex_carta.html')
+    </div>
+
+    <div class="cart_contact">
+        <div class="cart1">
+            @@include('../components/contact_inf.html', {
+            "zag_cont": "Заказать сайт: <br> +7 (905) 661-18-60",
+            "time_work": "пн-вс 9:00-21:00"
+            })
+            @@include('../components/contact_inf.html', {
+            "zag_cont": "Тех. поддержка: <br> +7 (831) 422-85-59",
+            "time_work": "пн-вс 9:00-18:00 <br> пт 10:00-16:00"
+            })
+        </div>
+
+        <div class="cart2">
+            @@include('../components/contact_inf.html', {
+            "zag_cont": "Отдел дизайна: <br> +7 (831) 422-85-99",
+            "time_work": "пн-вс 9:00-18:00 <br> пт 10:00-16:00"
+            })
+            @@include('../components/contact_inf.html', {
+            "zag_cont": "Контент/Каталоги: <br> +7 (831) 422-85-09",
+            "time_work": "пн-вс 9:00-18:00 <br> пт 10:00-16:00"
+            })
+        </div>
+    </div>
+    <div class="manager">
+        <div class="maneger_text">
+            Менеджеры
+        </div>
+        <div class="cart_manager">
+
+
+            <div class="managers">
+                @@include('../components/manager.html', {
+                "photo_manager": "assets/images/jul.webp",
+                "name_manager": "Юлия",
+                "status_manager": "менеджер",
+                "number_manager": "+7 (908) 231-84-18",
+                "email_manager": "julia@webrazrabotka.ru"
+                })
+                @@include('../components/manager.html', {
+                "photo_manager": "assets/images/margo.webp",
+                "name_manager": "Маргарита",
+                "status_manager": "менеджер",
+                "number_manager": "+7 (908) 161-20-62",
+                "email_manager": "rita@webrazrabotka.ru"
+                })
+            </div>
+            <div class="managers">
+                @@include('../components/manager.html', {
+                "photo_manager": "assets/images/alenka.webp",
+                "name_manager": "Алена",
+                "status_manager": "менеджер",
+                "number_manager": "+7 (908) 167-06-03",
+                "email_manager": "alena@webrazrabotka.ru"
+                })
+                @@include('../components/manager.html', {
+                "photo_manager": "assets/images/svetlana.webp",
+                "name_manager": "Светлана",
+                "status_manager": "менеджер",
+                "number_manager": "+7 (910) 388-45-49",
+                "email_manager": "sveta@webrazrabotka.ru"
+                })
+            </div>
+            <div class="managers">
+                @@include('../components/manager.html', {
+                "photo_manager": "assets/images/kris.webp",
+                "name_manager": "Кристина",
+                "status_manager": "менеджер",
+                "number_manager": "+7 (999) 079-30-09",
+                "email_manager": "Kristina@webrazrabotka.ru"
+                })
+            </div>
+        </div>
+    </div>
+</div>
+<div class="fot">
+    @@include('../components/footer.html')
+</div>
+
+
+<script src="js/index.js"></script>
+</body>
+</html>

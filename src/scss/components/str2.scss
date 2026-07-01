@@ -1,0 +1,127 @@
+/* ===== Глобальные стили ===== */
+* {
+  font-family: 'Merriweather', serif;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+.o_company {
+  font-size: 48px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.block3 {
+  width: 100%;
+  background-image: url('../images/fon.webp');
+  height: 1900px;
+  margin: 0px;
+}
+
+.text_company,
+.text_company2 {
+  font-size: 24px;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.payk_txt {
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.paychok1 {
+  display: flex;
+  justify-content: center; /* Центрирует по горизонтали */
+  align-items: center;
+  margin-top: 50px;
+}
+.p1{
+  display: flex;
+  justify-content: center; /* Центрирует по горизонтали */
+  align-items: center;
+}
+
+.payk_26 {
+  display: flex;
+  gap: 400px;
+  justify-content: center;
+  align-items: center;
+  margin-top: -170px;
+}
+.p2{
+  margin-left: 395px;
+
+}
+.p6{
+  margin-left: 800px;
+  margin-top: -100px;
+}
+
+.payk_35 {
+  display: flex;
+  gap: 400px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.paychok4 {
+  display: flex;
+  justify-content: center; /* Центрирует по горизонтали */
+  align-items: center;
+  margin-top: 60px;
+}
+.year {
+  width: 159px;
+  height: 64px;
+  font-size: 32px;
+  color: white;
+  background-color: #D61A21;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  top: -30px; /* ← двигает вверх, НО НЕ ТРОГАЕТ payk_26 */
+}
+.p3{
+  margin-left: 550px;
+  margin-top: -190px;
+}
+.p5{
+  margin-left: 800px;
+  margin-top: -150px;
+}
+.p4{
+  margin-left: 750px;
+  margin-top: -300px;
+}
+.text_company4{
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  margin-top: 180px;
+}
+.banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+  gap: 580px;
+  margin-top: 100px;
+}
+.fooooot{
+  margin-top: -170px;
+}

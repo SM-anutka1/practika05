@@ -1,0 +1,145 @@
+* {
+    font-family: 'Merriweather', serif;
+}
+/* ===== Форма ===== */
+.form-wrapper {
+    width: 790px;
+    height: 680px;
+    background: #E8E8E8;
+    border-radius: 10px;
+    padding: 40px 50px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-top: 60px;
+}
+
+.feedback-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* отступ между рядами */
+}
+
+/* Ряд с двумя полями */
+.form-row {
+    display: flex;
+    gap: 16px; /* между полями в ряду */
+}
+
+/* ===== Размеры полей ===== */
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group-full {
+    flex: 0 0 100%;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6C6C6C;
+    margin-bottom: 5px;
+}
+
+/* === ОБЩИЕ РАЗМЕРЫ ДЛЯ ВСЕХ ПОЛЕЙ === */
+.form-input {
+    width: 345px;      /* 345 на 70 */
+    height: 70px;
+    padding: 0 16px;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Merriweather', serif;
+    background: #fff;
+    outline: none;
+    box-sizing: border-box;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+/* === ПОЛНАЯ ШИРИНА (Адрес сайта, Город, Услуга) === */
+.form-input-full {
+    width: 680px!important;
+    height: 72px;
+}
+
+
+/* Убрали обводку при фокусе */
+.form-input:focus {
+    border-color: #D61A21;
+    outline: none;
+    box-shadow: none;
+}
+
+.form-input::placeholder {
+    color: #aaa;
+}
+
+/* Стиль для select */
+select.form-input {
+    appearance: none;
+    //background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M6 8L1 3h10z' fill='%23666'/%3E%3C/svg%3E");
+    //background-repeat: no-repeat;
+    //background-position: right 14px center;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Чекбокс */
+.form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.form-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    margin-top: 2px;
+    accent-color: #D61A21;
+    cursor: pointer;
+}
+
+.form-checkbox label {
+    font-size: 13px;
+    color: #6C6C6C;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+/* ===== Кнопка отправки ===== */
+.form-submit {
+    background: #D61A21;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    width: 260px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0 auto; /* центрирование по горизонтали */
+    display: block; /* чтобы работал margin: 0 auto */
+}
+
+.form-submit:hover {
+    background: #a00000;
+    transform: scale(1.02);
+}
+
+.form-submit:active {
+    transform: scale(0.98);
+}
+/* Убираем ромбики у чекбокса */
+.form-checkbox,
+.form-checkbox label,
+.form-checkbox li {
+    list-style: none !important;
+}

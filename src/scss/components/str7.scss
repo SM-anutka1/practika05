@@ -1,0 +1,122 @@
+/* ===== GOOGLE ADS ===== */
+.icon_name_google {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 100px;
+  margin-top: 50px;
+  gap: 15px;
+}
+
+.icon_google {
+  flex-shrink: 0;
+}
+
+.icon_google img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  display: block;
+}
+
+.name_google {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.text_google {
+  font-size: 24px;
+  margin-right: 100px;
+  margin-top: 20px;
+  text-align: right;
+  line-height: 1.6;
+}
+
+/* ================================================================
+   АДАПТИВ ДЛЯ GOOGLE ADS (КАК У ЯНДЕКСА)
+   ================================================================ */
+
+/* Планшеты */
+@media (max-width: 1024px) {
+  .icon_name_google {
+    justify-content: flex-start;
+    margin-right: 0;
+    margin-left: 20px;
+    margin-top: 30px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .name_google {
+    font-size: 28px;
+    margin-top: 0;
+  }
+
+  .icon_google img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .text_google {
+    font-size: 18px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 15px;
+    text-align: left;
+    line-height: 1.6;
+  }
+
+  .text_google br {
+    display: none;
+  }
+}
+
+/* Телефоны */
+@media (max-width: 768px) {
+  .icon_name_google {
+    margin-left: 15px;
+    margin-top: 20px;
+  }
+
+  .name_google {
+    font-size: 22px;
+  }
+
+  .icon_google img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .text_google {
+    font-size: 16px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+  }
+}
+
+/* Маленькие телефоны */
+@media (max-width: 480px) {
+  .icon_name_google {
+    margin-left: 10px;
+    margin-top: 15px;
+  }
+
+  .name_google {
+    font-size: 18px;
+  }
+
+  .icon_google img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .text_google {
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+}

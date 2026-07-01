@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Разработка сайта</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css"/>
+</head>
+<body>
+
+@@include('../components/header.html')
+
+<div class="block5">
+    <div class="razrab_sat">
+        <div class="razrab_text">Разработка сайта</div>
+        <div class="razrab_text2">Наши сайты направлены на продажи!</div>
+        <div class="razrab_text3">
+            <b>Мы увеличим прибыль от вашего сайта в 10 раз!</b></div>
+        <div class="razrab_text4">
+            <div class="raz_text4_1">
+                <b>ВЕБРАЗРАБОТКА -</b>
+            </div>
+            <div class="raz_text4_2">
+                технологии будущего
+            </div>
+        </div>
+        <div class="razrab_text5">
+            <div class="razrab_text5_1">
+                Низкая цена
+            </div>
+            <div class="razrab_text5_1">
+                Эксклюзивность
+            </div>
+            <div class="razrab_text5_1">
+                Комплексный подход
+            </div>
+        </div>
+        <div class="razrab_text6">
+            <div class="razrab_text6_1">
+                <b>Вместо 1 пропущенного клиента — 5 реальных звонков <b>
+            </div>
+            <div class="razrab_text6_2">
+                Мы делаем так, чтобы Вам звонили.
+            </div>
+        </div>
+        <div class="cart_mal">
+            <div class="cart1">
+                @@include('../components/mal_cart.html', {
+                "cart_text_small": "Лучшие дизайнеры города"
+                })
+
+                @@include('../components/mal_cart.html', {
+                "cart_text_small": "Лучшая система Joomla 3.5"
+                })
+
+            </div>
+            <div class="cart1">
+                @@include('../components/mal_cart.html', {
+                "cart_text_small": "Не меняем цены уже 6 лет "
+                })
+
+                @@include('../components/mal_cart.html', {
+                "cart_text_small": "За 10 лет ни одного отказа"
+                })
+
+            </div>
+            <div class="cart1">
+                @@include('../components/mal_cart.html', {
+                "cart_text_small": "Работаем не по шаблону "
+                })
+
+                @@include('../components/mal_cart.html', {
+                "cart_text_small": "Длеаем до 30 сайтов в месяц"
+                })
+
+            </div>
+        </div>
+
+        <div class="card_big">
+            @@include('../components/cart_big.html', {
+            "text_big": "Эксклюзивный сайт",
+            "description_big": "Только индивидуальный, неповторимый дизайн. Мы гарантируем, что этот дизайн не получит больше никто. Цена сайта составляет практически 0.",
+            "cost_big": "15 000 руб.",
+            "sale_text": ""
+            })
+
+            @@include('../components/cart_big.html', {
+            "text_big": "Эксклюзивный сайт + Витрина",
+            "description_big": "Витрина это уникальная разработка нашей компании, включающая 3 больших блока инструментов и целый комплекс эксклюзивных баннеров.",
+            "cost_big": "15 000 руб + 30 000 руб",
+            "sale_text": "-5%"
+            })
+
+            @@include('../components/cart_big.html', {
+            "text_big": "Эксклюзивный сайт + Витрина + Интернет магазин",
+            "description_big": "Функциональный удобный интернет-магазин, с неограниченным количеством позиций, удобным добавлением новых товаров и многое другое.",
+            "cost_big": "15 000 руб + 30 000 руб + 25 000 руб",
+            "sale_text": "-10%"
+            })
+
+            @@include('../components/cart_big.html', {
+            "text_big": "Интернет магазин + Интеграция 1С",
+            "description_big": "Возможность одним кликом перенести 10 000 тысяч позиций и более в магазин. Большая экономия. (Требуется предварительная интеграция интернет магазина)",
+            "cost_big": "25 000 руб + 25 000 руб",
+            "sale_text": "-15%"
+            })
+        </div>
+
+        <div class="str4_text">
+            <div class="str4_text1">
+                ТОЛЬКО ДО 29 АВГУСТА!
+            </div>
+            <div class="str4_text2">
+                при заказе 4 блоков - эксклюзивный сайт + витрина <br>
+                + интернет магазин + 1С интеграция
+            </div>
+            <div class="str4_sale">
+                -20%
+            </div>
+            <div class="str4_text3">
+                *о эксклюзивных подарках при разработке сайта можете узнать у  менежджеров
+            </div>
+        </div>
+
+    </div>
+    @@include('../components/footer.html')
+</div>
+<script src="js/index.js"></script>
+</body>
+</html>

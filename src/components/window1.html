@@ -1,0 +1,24 @@
+<!-- ===== МОДАЛЬНОЕ ОКНО ДЛЯ ПОДАРКОВ ===== -->
+<div class="modal-overlay" id="giftModal">
+    <div class="modal-content">
+        <button class="modal-close" id="giftModalClose">&times;</button>
+        <div class="modal-body">
+            <h2>🎁 Получить подарок</h2>
+            <p>Заполните форму, и мы свяжемся с вами!</p>
+            <form id="giftForm">
+                <div class="form-group">
+                    <label for="giftName">Ваше имя</label>
+                    <input type="text" id="giftName" placeholder="Введите ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <label for="giftPhone">Номер телефона</label>
+                    <input type="tel" id="giftPhone" placeholder="+7 (___)-___-__-__" required>
+                </div>
+                <button type="submit" class="gift-submit-btn">Отправить заявку</button>
+            </form>
+            <div id="giftSuccess" style="display: none; color: green; font-size: 18px; text-align: center; margin-top: 20px;">
+                ✅ Спасибо! Мы свяжемся с вами в ближайшее время.
+            </div>
+        </div>
+    </div>
+</div>

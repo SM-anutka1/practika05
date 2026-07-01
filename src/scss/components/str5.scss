@@ -1,0 +1,280 @@
+
+* {
+  font-family: 'Merriweather', serif;
+}
+a{
+  text-decoration: none;
+
+}
+
+.text_block6 {
+  font-size: 48px;
+  padding-top: 135px;
+  display: flex;
+  justify-content: center;
+text-align: center;
+}
+
+.block6 {
+  width: 100%;
+  background-image: url('../images/fon.webp');
+  height: 4400px;
+  margin: 0px;
+}
+.text2_block6{
+  font-size: 36px;
+  text-align: center;
+  margin-top: 70px;
+}
+.long1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.long2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.cards_long{
+  margin-top: 75px;
+}
+.cont_rekl{
+  margin-left: 100px;
+  margin-top: 90px;
+}
+.cont_rekl_text{
+  font-size: 48px;
+
+}
+.cont_rekl_text2{
+  font-size: 24px;
+  margin-top: 40px;
+}
+.red-text{
+  color: #D61A21;
+  font-size: 24px;
+  text-align: left;
+}
+.celi_preim_text{
+  font-size: 48px;
+  margin-left: 100px;
+  margin-top: 80px;
+}
+.big_block{
+  margin-top: 80px;
+}
+.first_block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.second_1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+.pocl {
+  width: 1075px;
+  height: 38px;
+  background-color: #D61A21;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 15px;
+
+}
+.pocl_text{
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+}
+.one{
+  font-size: 48px;
+  color: #D61A21;
+}
+.one_text{
+  font-size: 24px;
+  color: black;
+  margin-top: 20px;
+}
+.spisok1{
+  display: flex;
+  text-align: left;
+  margin-left: 100px;
+  margin-top: 15px;
+}
+.spisok{
+  margin-top: 50px;
+}
+.spisok_text{
+  font-size: 48px;
+  margin-left: 100px;
+  margin-top: 80px;
+}
+.texts{
+  font-size: 36px;
+  text-align: center;
+  margin-top: 65px;
+}
+.block7_text2{
+  color: #D61A21;
+  margin-top: 30px;
+}
+.name_yandex{
+  font-size: 36px;
+}
+.text_yandex{
+  font-size: 24px;
+  margin-left: 100px;
+  margin-top: 30px;
+}
+.icon_name{
+  display: flex;
+  margin-left: 100px;
+}
+.name_yandex{
+  margin-left: 25px;
+  margin-top: 25px;
+}
+.yandex{
+  margin-top: 40px;
+}
+
+.icon_google{
+  margin-left: 35px;
+}
+.name_google{
+  font-size: 36px;
+  margin-top: 50px;
+}
+.icon_name_google{
+  display: flex;
+  margin-left: 1000px;
+  margin-top: 50px;
+}
+.text_google{
+  font-size: 24px;
+  margin-left: 550px;
+  margin-top: 30px;
+}
+.big_banner{
+  margin-left: 100px;
+  margin-top: 100px;
+}
+.big_ban_text{
+  font-size: 40px;
+
+}
+.big_ban_text2{
+  font-size: 24px;
+  margin-top: 30px;
+}
+.btnhska {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+
+/* ================================================================
+   АДАПТИВ ДЛЯ БЛОКА GOOGLE ADS (КАК У ЯНДЕКСА)
+   ================================================================ */
+
+/* Планшеты */
+@media (max-width: 1024px) {
+  .icon_name_google {
+    margin-left: 20px !important;
+    margin-top: 30px !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+  }
+
+  .name_google {
+    font-size: 28px !important;
+    margin-top: 0 !important;
+    text-align: left !important;
+    width: auto !important;
+  }
+
+  .icon_google {
+    margin-left: 10px !important;
+    margin-top: 0 !important;
+  }
+
+  .icon_google img {
+    width: 50px !important;
+    height: 50px !important;
+    object-fit: contain !important;
+  }
+
+  .text_google {
+    font-size: 18px !important;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    margin-top: 20px !important;
+    text-align: left !important;
+    line-height: 1.6 !important;
+  }
+
+  .text_google br {
+    display: none !important;
+  }
+}
+
+/* Телефоны */
+@media (max-width: 768px) {
+  .icon_name_google {
+    margin-left: 15px !important;
+    margin-top: 20px !important;
+  }
+
+  .name_google {
+    font-size: 22px !important;
+  }
+
+  .icon_google img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .text_google {
+    font-size: 16px !important;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+    margin-top: 15px !important;
+  }
+}
+
+/* Маленькие телефоны */
+@media (max-width: 480px) {
+  .icon_name_google {
+    margin-left: 10px !important;
+    margin-top: 15px !important;
+  }
+
+  .name_google {
+    font-size: 18px !important;
+  }
+
+  .icon_google img {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .text_google {
+    font-size: 14px !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    margin-top: 10px !important;
+  }
+}

@@ -1,0 +1,165 @@
+/* ===== ОСНОВНЫЕ СТИЛИ ===== */
+.managers__card {
+  width: 480px;
+  height: 268px;
+  border-radius: 10px;
+  border: 3px solid #D61A21;
+  display: flex;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  list-style: none !important;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  align-items: center;
+  gap: 20px;
+}
+
+.managers__card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(214, 26, 33, 0.2);
+}
+
+.manager_photo {
+  flex-shrink: 0;
+  width: 150px;      /* ← ОСНОВНОЙ РАЗМЕР */
+  height: 230px;     /* ← ОСНОВНОЙ РАЗМЕР */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.manager_photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.manager_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  flex: 1;
+}
+
+.manager_name {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.manager_status {
+  font-size: 16px;
+  color: #D61A21;
+  margin: 0;
+}
+
+.number_manager {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+}
+
+.manager_email {
+  font-size: 16px;
+  color: #777;
+  margin: 0;
+}
+
+/* ================================================================
+   АДАПТИВ ДЛЯ КАРТОЧЕК МЕНЕДЖЕРОВ
+   ================================================================ */
+
+/* Планшеты (до 1024px) */
+@media (max-width: 1024px) {
+  .managers__card {
+    width: 420px;
+    height: 240px;
+    padding: 15px 18px;
+    gap: 15px;
+  }
+
+  .manager_photo {
+    width: 110px;
+    height: 140px;
+  }
+
+  .manager_name {
+    font-size: 24px;
+  }
+
+  .manager_status,
+  .number_manager,
+  .manager_email {
+    font-size: 15px;
+  }
+
+  .manager_text {
+    gap: 4px;
+  }
+}
+
+/* Телефоны (до 768px) */
+@media (max-width: 768px) {
+  .managers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .managers__card {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    min-height: 200px;
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .manager_photo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .manager_name {
+    font-size: 22px;
+  }
+
+  .manager_status,
+  .number_manager,
+  .manager_email {
+    font-size: 14px;
+  }
+}
+
+/* Маленькие телефоны (до 480px) */
+@media (max-width: 480px) {
+  .managers__card {
+    max-width: 100%;
+    padding: 12px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .manager_photo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .manager_name {
+    font-size: 20px;
+  }
+
+  .manager_status,
+  .number_manager,
+  .manager_email {
+    font-size: 13px;
+  }
+
+  .manager_text {
+    align-items: center;
+    text-align: center;
+  }
+}

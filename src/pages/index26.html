@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Предложение для малых и крупных бизнесов</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css"/>
+</head>
+<body>
+@@include('../components/header.html')
+
+<div class="block20">
+  <div class="block20_1">
+    Оставьте заявку!
+  </div>
+  <div class="block20_2">
+    Мы вам позвоним
+  </div>
+  <div class="formochka">
+    @@include('../components/form1.html')
+  </div>
+
+
+</div>
+
+<div class="fot">
+  @@include('../components/footer.html')
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+
+    const form = document.querySelector('.feedback-form');
+
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+
+        const data = {
+          name: document.getElementById('form-name').value,
+          phone: document.getElementById('form-phone').value,
+          company: document.getElementById('form-company').value,
+          email: document.getElementById('form-email').value,
+          site: document.getElementById('form-site').value,
+          city: document.getElementById('form-city').value,
+          service: document.getElementById('form-service').value,
+          date: new Date().toLocaleString()
+        };
+
+
+        let apps = JSON.parse(localStorage.getItem('applications')) || [];
+        apps.push(data);
+        localStorage.setItem('applications', JSON.stringify(apps));
+
+        form.reset();
+
+      });
+    }
+  });
+</script>
+
+<script src="js/index.js"></script>
+</body>
+</html>

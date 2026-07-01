@@ -1,0 +1,727 @@
+// ==== 1. Utils ====
+@use 'utils/variables';
+
+// ==== 2. Base styles ====
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/layout';
+
+// ==== 3. Layout ====
+@use 'layout/container';
+
+// ==== 4. Components ====
+@use 'components/header';
+@use 'components/str1';
+@use 'components/window1';
+@use 'components/predl_btn';
+@use 'components/form1';
+@use 'components/yandex_carta';
+@use 'components/footer';
+@use 'components/str2';
+@use 'components/str3';
+@use 'components/str4';
+@use 'components/str5';
+@use 'components/str6';
+@use 'components/str7';
+@use 'components/str8';
+@use 'components/str9';
+@use 'components/str10';
+@use 'components/str11';
+@use 'components/str12';
+@use 'components/str13';
+@use 'components/str15';
+@use 'components/str17';
+@use 'components/str18';
+@use 'components/str19';
+@use 'components/str24';
+@use 'components/str26';
+@use 'components/payk';
+@use 'components/contact_inf';
+@use 'components/manager';
+@use 'components/mal_cart';
+@use 'components/cart_big';
+@use 'components/card_long';
+@use 'components/celi_preim1';
+@use 'components/celi_preim2';
+@use 'components/btn';
+@use 'components/cart_sotc_seti';
+@use 'components/spisok';
+@use 'components/keys';
+@use 'components/vizitka';
+@use 'components/primer';
+
+
+
+
+
+
+
+.your-block {
+  background-image: url('../images/fon.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+/* ================================================================
+   АДАПТИВНАЯ ВЕРСТКА (МИНИМАЛЬНАЯ)
+   ================================================================ */
+
+/* Планшеты и маленькие ноутбуки */
+@media (max-width: 1024px) {
+
+  .AAAA {
+    display: flex;
+  }
+
+  .text_bl1 {
+    font-size: 36px !important;
+    margin-left: 20px !important;
+    padding-top: 80px !important;
+  }
+
+  .text_bl2 {
+    font-size: 20px !important;
+    margin-left:  20px !important;
+    margin-top: 40px !important;
+  }
+
+  .text_bl3 {
+    margin-left: 0 !important;
+    margin-top: 40px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 20px !important;
+  }
+
+  .txt_bl3 {
+    font-size: 30px !important;
+  }
+
+  .txt_bl3_1,
+  .txt_bl3_2 {
+    font-size: 20px !important;
+  }
+
+  .nap_sat,
+  .sotc_seti {
+    width: 90% !important;
+    font-size: 28px !important;
+    height: 60px !important;
+  }
+
+  .reklama,
+  .ved_sat {
+    width: 45% !important;
+    height: 200px !important;
+  }
+
+  .reklama_text,
+  .ved_text {
+    font-size: 28px !important;
+    bottom: 10px !important;
+    left: 15px !important;
+  }
+
+  .categoty2 {
+    gap: 20px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .ycl_text {
+    font-size: 36px !important;
+    margin-left: 20px !important;
+    margin-top: 30px !important;
+  }
+
+  .tabs-container {
+    flex-direction: column !important;
+    margin: 30px 20px 0 20px !important;
+    gap: 20px !important;
+  }
+
+  .tabs-nav {
+    flex: 0 0 auto !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 5px !important;
+  }
+
+  .tab-btn {
+    font-size: 14px !important;
+    padding: 8px 15px !important;
+    border-left: none !important;
+    border-bottom: 3px solid transparent !important;
+  }
+
+  .tab-btn.active {
+    border-left-color: transparent !important;
+    border-bottom-color: #D61A21 !important;
+  }
+
+  .tabs-content {
+    padding: 20px !important;
+    min-height: 200px !important;
+  }
+
+  .tab-table td {
+    font-size: 14px !important;
+    padding: 8px 10px !important;
+  }
+
+  .form-wrapper {
+    width: 95% !important;
+    height: auto !important;
+    padding: 30px 20px !important;
+  }
+
+  .form-row {
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+
+  .form-input {
+    width: 100% !important;
+    height: 56px !important;
+  }
+
+  .form-input-full {
+    width: 100% !important;
+    height: 56px !important;
+  }
+
+  .form-submit {
+    width: 100% !important;
+  }
+
+  .big {
+    width: 100% !important;
+    height: auto !important;
+    padding: 20px !important;
+  }
+
+  .card_big {
+    grid-template-columns: 1fr !important;
+    margin: 30px 20px !important;
+    gap: 20px !important;
+  }
+
+  .cont_inf {
+    width: 100% !important;
+    height: auto !important;
+    padding: 20px !important;
+  }
+
+  .con_zag {
+    font-size: 24px !important;
+  }
+
+  .time_work {
+    font-size: 18px !important;
+  }
+
+  .contact_text {
+    font-size: 36px !important;
+    padding-top: 60px !important;
+  }
+
+  .contact_text2 {
+    font-size: 24px !important;
+    margin-left: 20px !important;
+    margin-top: 30px !important;
+  }
+
+  .contact_text3 {
+    font-size: 18px !important;
+    margin-left: 20px !important;
+    margin-top: 15px !important;
+  }
+
+  .cart1,
+  .cart2 {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .maneger_text {
+    font-size: 32px !important;
+    margin-left: 20px !important;
+    margin-top: 40px !important;
+  }
+
+  .managers__card {
+    flex: 0 0 220px !important;
+  }
+
+  .keys_full {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .keys-wrapper {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .block9_reb_block {
+    width: 95% !important;
+    height: auto !important;
+    padding: 20px !important;
+  }
+
+  .block9_white_block {
+    width: 100% !important;
+    height: auto !important;
+    flex-direction: column !important;
+    padding: 20px !important;
+  }
+
+  .text_red1 {
+    font-size: 22px !important;
+    text-align: center !important;
+  }
+
+  .text_red2 {
+    font-size: 16px !important;
+    text-align: center !important;
+  }
+
+  .footer {
+    height: auto !important;
+    padding: 30px 20px 20px !important;
+  }
+
+  .logo_img_footer {
+    margin-left: 0 !important;
+    padding-top: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .logo_text_footer {
+    margin: 10px 0 0 0 !important;
+    font-size: 14px !important;
+  }
+
+  .logo_text_footer2 {
+    margin: 0 !important;
+    font-size: 28px !important;
+  }
+
+  .navigation {
+    margin-top: 20px !important;
+    justify-items: center !important;
+    gap: 10px !important;
+    font-size: 18px !important;
+  }
+
+  .footer_text {
+    margin: 20px 0 0 0 !important;
+    text-align: center !important;
+    font-size: 13px !important;
+  }
+
+  .vk {
+    margin: 15px 0 0 0 !important;
+    text-align: center !important;
+  }
+
+  .block1,
+  .block3,
+  .block4,
+  .block8 {
+    height: auto !important;
+    padding-bottom: 50px !important;
+  }
+
+  .text_block9 {
+    font-size: 32px !important;
+    padding-top: 80px !important;
+  }
+
+  .block9_text4 {
+    font-size: 18px !important;
+    margin-left: 20px !important;
+  }
+}
+
+/* Телефоны */
+@media (max-width: 768px) {
+  .menu {
+    margin-left: 10px !important;
+    margin-top: 15px !important;
+  }
+
+  .logo_img svg {
+    width: 60px !important;
+  }
+
+  .logo_text2 {
+    margin-left: -130px !important;
+    font-size: 18px !important;
+  }
+
+  .phone_img svg {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .burger-btn span {
+    width: 24px !important;
+    height: 2.5px !important;
+  }
+
+  .mobile-menu {
+    width: 280px !important;
+  }
+
+  .text_bl1 {
+    font-size: 28px !important;
+    padding-top: 40px !important;
+  }
+
+  .text_bl2 {
+    font-size: 16px !important;
+  }
+
+  .txt_bl3 {
+    font-size: 24px !important;
+  }
+
+  .txt_bl3_1,
+  .txt_bl3_2 {
+    font-size: 16px !important;
+  }
+
+  .nap_sat,
+  .sotc_seti {
+    font-size: 20px !important;
+    height: 50px !important;
+  }
+
+  .reklama,
+  .ved_sat {
+    width: 100% !important;
+    height: 150px !important;
+  }
+
+  .reklama_text,
+  .ved_text {
+    font-size: 22px !important;
+  }
+
+  .ycl_text {
+    font-size: 28px !important;
+    margin-left: 15px !important;
+  }
+
+  .tab-btn {
+    font-size: 12px !important;
+    padding: 6px 12px !important;
+  }
+
+  .tabs-content {
+    padding: 15px !important;
+  }
+
+  .tab-table td {
+    font-size: 12px !important;
+    padding: 6px 8px !important;
+  }
+
+  .form-wrapper {
+    padding: 20px 15px !important;
+  }
+
+  .form-checkbox label {
+    font-size: 12px !important;
+  }
+
+  .con_zag {
+    font-size: 20px !important;
+  }
+
+  .time_work {
+    font-size: 16px !important;
+  }
+
+  .maneger_text {
+    font-size: 24px !important;
+    text-align: center !important;
+    margin-left: 0 !important;
+  }
+
+  .managers__card {
+    flex: 0 0 160px !important;
+    padding: 15px !important;
+  }
+
+  .managers__photo {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .managers__name {
+    font-size: 16px !important;
+  }
+
+  .text_block9 {
+    font-size: 24px !important;
+    padding-top: 40px !important;
+  }
+
+  .block9_text2 {
+    font-size: 20px !important;
+  }
+
+  .block9_text3 {
+    font-size: 16px !important;
+  }
+
+  .block9_text4 {
+    font-size: 14px !important;
+    margin-left: 15px !important;
+  }
+
+  .contact_text {
+    font-size: 28px !important;
+    padding-top: 40px !important;
+  }
+
+  .contact_text2 {
+    font-size: 20px !important;
+    margin-left: 15px !important;
+  }
+
+  .contact_text3 {
+    font-size: 16px !important;
+    margin-left: 15px !important;
+  }
+
+  .map-wrapper iframe {
+    height: 300px !important;
+  }
+
+  .block9_text5_1,
+  .block9_text5_2 {
+    font-size: 16px !important;
+    margin-left: 15px !important;
+  }
+
+  .one_text {
+    font-size: 16px !important;
+  }
+
+  .text_red1 {
+    font-size: 18px !important;
+  }
+
+  .text_red2 {
+    font-size: 14px !important;
+  }
+
+  .logo_text_footer2 {
+    font-size: 22px !important;
+  }
+
+  .navigation {
+    font-size: 16px !important;
+    gap: 8px !important;
+  }
+
+  .footer_text {
+    font-size: 12px !important;
+  }
+
+  .logo_text_footer {
+    font-size: 12px !important;
+  }
+
+  .vk svg {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+
+/* Маленькие телефоны */
+@media (max-width: 480px) {
+  .menu {
+    margin-left: 5px !important;
+    margin-top: 10px !important;
+  }
+
+  .logo_img svg {
+    width: 44px !important;
+  }
+
+  .logo_text2 {
+    margin-left: -90px !important;
+    font-size: 14px !important;
+  }
+
+  .phone_img svg {
+    width: 26px !important;
+    height: 26px !important;
+  }
+
+  .burger-btn span {
+    width: 20px !important;
+    height: 2px !important;
+  }
+
+  .mobile-menu {
+    width: 240px !important;
+  }
+
+  .text_bl1 {
+    font-size: 22px !important;
+    margin-left: 10px !important;
+    padding-top: 30px !important;
+  }
+
+  .text_bl2 {
+    font-size: 14px !important;
+    margin-left: 10px !important;
+  }
+
+  .txt_bl3 {
+    font-size: 20px !important;
+  }
+
+  .txt_bl3_1,
+  .txt_bl3_2 {
+    font-size: 14px !important;
+  }
+
+  .nap_sat,
+  .sotc_seti {
+    font-size: 16px !important;
+    height: 44px !important;
+    width: 95% !important;
+  }
+
+  .reklama_text,
+  .ved_text {
+    font-size: 18px !important;
+  }
+
+  .ycl_text {
+    font-size: 22px !important;
+    margin-left: 10px !important;
+  }
+
+  .tab-btn {
+    font-size: 11px !important;
+    padding: 4px 10px !important;
+  }
+
+  .tabs-content {
+    padding: 10px !important;
+  }
+
+  .tab-table td {
+    font-size: 11px !important;
+    padding: 4px 6px !important;
+  }
+
+  .form-wrapper {
+    padding: 15px 10px !important;
+  }
+
+  .form-input {
+    height: 44px !important;
+    font-size: 14px !important;
+  }
+
+  .form-submit {
+    height: 44px !important;
+    font-size: 16px !important;
+  }
+
+  .con_zag {
+    font-size: 18px !important;
+  }
+
+  .time_work {
+    font-size: 14px !important;
+  }
+
+  .managers__card {
+    flex: 0 0 140px !important;
+    padding: 10px !important;
+  }
+
+  .managers__photo {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .managers__name {
+    font-size: 14px !important;
+  }
+
+  .text_block9 {
+    font-size: 20px !important;
+  }
+
+  .block9_text2 {
+    font-size: 18px !important;
+  }
+
+  .block9_text3 {
+    font-size: 14px !important;
+  }
+
+  .one_text {
+    font-size: 14px !important;
+  }
+
+  .text_red1 {
+    font-size: 16px !important;
+  }
+
+  .text_red2 {
+    font-size: 12px !important;
+  }
+
+  .contact_text {
+    font-size: 24px !important;
+  }
+
+  .contact_text2 {
+    font-size: 18px !important;
+  }
+
+  .contact_text3 {
+    font-size: 14px !important;
+  }
+
+  .map-wrapper iframe {
+    height: 200px !important;
+  }
+
+  .logo_text_footer2 {
+    font-size: 18px !important;
+  }
+
+  .navigation {
+    font-size: 14px !important;
+    gap: 5px !important;
+  }
+
+  .footer_text {
+    font-size: 10px !important;
+  }
+
+  .logo_text_footer {
+    font-size: 10px !important;
+  }
+
+  .vk svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+}
