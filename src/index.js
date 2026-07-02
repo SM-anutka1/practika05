@@ -1,6 +1,14 @@
-// ================================================================
-// 1. ТАБЫ
-// ================================================================
+
+
+
+
+
+
+
+
+
+
+
 
 const tabBtns = document.querySelectorAll('.tab-btn');
 const tabPanels = document.querySelectorAll('.tab-panel');
@@ -22,9 +30,6 @@ if (tabBtns.length > 0 && tabPanels.length > 0) {
     });
 }
 
-// ================================================================
-// 2. БУРГЕР МЕНЮ
-// ================================================================
 
 const burgerBtn = document.getElementById('burgerBtn');
 const mobileMenu = document.getElementById('mobileMenu');
@@ -258,3 +263,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
+
+
