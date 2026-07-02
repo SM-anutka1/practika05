@@ -1,7 +1,3 @@
-// ================================================================
-// 1. ПЕРЕКЛЮЧАТЕЛИ ТАБОВ НА ГЛАВНОЙ СТРАНИЦЕ
-// ================================================================
-
 const tabBtns = document.querySelectorAll('.tab-btn');
 const tabPanels = document.querySelectorAll('.tab-panel');
 
@@ -22,10 +18,6 @@ if (tabBtns.length > 0 && tabPanels.length > 0) {
     });
 }
 
-
-// ================================================================
-// 2. БУРГЕР-МЕНЮ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ
-// ================================================================
 
 const burgerBtn = document.getElementById('burgerBtn');
 const mobileMenu = document.getElementById('mobileMenu');
@@ -80,11 +72,6 @@ if (burgerBtn && mobileMenu) {
         link.addEventListener('click', closeMenu);
     });
 }
-
-
-// ================================================================
-// 3. ФОРМА ОБРАТНОЙ СВЯЗИ
-// ================================================================
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -201,9 +188,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// ================================================================
-// 4. МОДАЛЬНОЕ ОКНО ДЛЯ МЕНЕДЖЕРОВ
-// ================================================================
 
 document.addEventListener('DOMContentLoaded', function() {
 
